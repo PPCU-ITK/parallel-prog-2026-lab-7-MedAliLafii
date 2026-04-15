@@ -10,3 +10,8 @@ nvc++ -mp=gpu -gpu=cc80 -Ofast laplace2d.cpp -o laplace -Minfo=accel,mp
 
 srun -p gpu --gres=gpu:1 --ntasks=1 --time=00:05:00 --mem=40G ./laplace
 
+##	CPU	GPU
+Default	0.760s	0.819s
+4x	3.044s	0.974s
+8x	6.038s	1.128s
+16x	12.162s	2.237s
